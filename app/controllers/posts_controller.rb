@@ -60,7 +60,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find_by(params.permit(:id).to_h)
+      @post = Post.find_by(id: params[:id])
     end
 
     # Only allow a list of trusted parameters through.
